@@ -87,8 +87,16 @@ int main(int argc, char *argv[])
                         switch (e.key.keysym.sym)
                         {
                         case SDLK_UP:
-                            printf("Keystrokes work!");
-                            running = false;
+                            drawRect.y -= 10;
+                            break;
+                        case SDLK_DOWN:
+                            drawRect.y += 10;
+                            break;
+                        case SDLK_LEFT:
+                            drawRect.x -= 10;
+                            break;
+                        case SDLK_RIGHT:
+                            drawRect.x += 10;
                             break;
 
                         default:
