@@ -8,9 +8,11 @@
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
-				"${file}",
+				"main.cpp",
+				"Game.h",
+				"Game.cpp",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}",
+				"${fileDirname}/game",
 				"-lSDL2",
 				"-lSDL2_image"
 			],
