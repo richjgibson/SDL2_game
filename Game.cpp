@@ -28,7 +28,7 @@ bool Game::Init(const char *title, int xpos, int ypos, int width, int height)
         return false;
     }
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 0);
-    playerTex = IMG_LoadTexture(renderer, "Dudepng.png");
+    playerTex = IMG_LoadTexture(renderer, "assets/dude.png");
     running = true;
     return true;
 }
