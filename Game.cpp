@@ -1,4 +1,5 @@
 #include "Game.h"
+#include <SDL2/SDL_image.h>
 #include <stdio.h>
 
 Game::Game()
@@ -27,6 +28,7 @@ bool Game::Init(const char *title, int xpos, int ypos, int width, int height)
         return false;
     }
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 0);
+    playerTex = IMG_LoadTexture(renderer, "assets/dude.png");
     running = true;
     return true;
 }
@@ -53,6 +55,7 @@ void Game::Update()
 void Game::Render()
 {
     SDL_RenderClear(renderer);
+    SDL_RenderCopy(renderer, playerTex, NULL, NULL);
     SDL_RenderPresent(renderer);
 }
 

@@ -5,6 +5,7 @@ class Game
 private:
     SDL_Window *window = nullptr;
     SDL_Renderer *renderer = nullptr;
+    SDL_Texture *playerTex = nullptr;
     bool running;
 
 public:
